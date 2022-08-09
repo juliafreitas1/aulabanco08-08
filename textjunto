@@ -1,4 +1,3 @@
-
 create table if not exists pacientes(
   id serial PRIMARY KEY,
   nome varchar(40) not null,
@@ -28,12 +27,12 @@ create table if not exists obitos(
   id serial PRIMARY KEY,
   obs text);
 ALTER TABLE consultas
-ADD CONSTRAINT FK_EspecialidadeDaConsulta FOREIGN KEY
+ADD CONSTRAINT FkEspecialidadeDaConsulta FOREIGN KEY
   (especialidade_id)
 REFERENCES
   especialidades (id);
 ALTER TABLE consultas
-ADD CONSTRAINT FK_ProfissionalDaConsulta FOREIGN KEY
+ADD CONSTRAINT FkProfissionalDaConsulta FOREIGN KEY
   (profiss_id)
 REFERENCES
   profissionais(id);
