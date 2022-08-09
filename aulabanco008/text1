@@ -1,3 +1,5 @@
+//Julia Freitas//
+
 create table if not exists pacientes(
 id serial PRIMARY KEY,
 nome varchar(40) not null,
